@@ -12,10 +12,26 @@
     </header>
     <main>
         <div id="prix-container">
-            <h2>Prix actuel :</h2>
-            <p id="prix">1.50€ / litre</p>
+            <h2>Prix actuels :</h2>
+            <p>SP98 : <span id="prix-sp98">1.50€ / litre</span></p>
+            <p>SP95-E10 : <span id="prix-sp95-e10">1.45€ / litre</span></p>
+            <p>Gazole : <span id="prix-gazole">1.40€ / litre</span></p>
         </div>
-        <button onclick="mettreAJourPrix()">Mettre à jour le prix</button>
+        <form id="prix-form">
+            <div>
+                <label for="prix-sp98-input">Prix SP98 :</label>
+                <input type="number" id="prix-sp98-input" step="0.01" min="0">
+            </div>
+            <div>
+                <label for="prix-sp95-e10-input">Prix SP95-E10 :</label>
+                <input type="number" id="prix-sp95-e10-input" step="0.01" min="0">
+            </div>
+            <div>
+                <label for="prix-gazole-input">Prix Gazole :</label>
+                <input type="number" id="prix-gazole-input" step="0.01" min="0">
+            </div>
+            <button type="button" onclick="mettreAJourPrix()">Mettre à jour le prix</button>
+        </form>
     </main>
     <footer>
         <p>&copy; 2024 Station Essence</p>
@@ -23,3 +39,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
